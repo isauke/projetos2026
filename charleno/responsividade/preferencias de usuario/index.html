@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando modo escuro e claro</title>
+    <style>
+        :root{
+            --Titulo: rgb(204, 201, 201);
+            --fundo: rgb(10, 8, 8);
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: var(--fundo);
+            color: var(--Titulo);
+        }
+        .cor{
+            color: var(--Titulo);
+        }
+        @media (prefers-color-scheme: light){
+            :root{
+                --Titulo: rgb(8, 5, 5);
+                --fundo: rgb(175, 174, 174);
+            }
+            body{
+                background-color: var(--fundo);
+                color: var(--Titulo);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="cor">Testando modo escuro e claro</h1>
+</body>
+</html>

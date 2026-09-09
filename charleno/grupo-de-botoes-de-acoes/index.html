@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grupo de botões de ações</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        #botoes{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100vw;
+            height: auto;
+            flex-wrap: wrap;
+        }
+        button{
+            width: 36px;
+            height: 36px;
+            margin: 5px;
+            border: 1px black solid;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        button:active{
+            background-color: #999;
+            transform: scale(0.95);
+        }
+        .separador{
+            width: 1px;
+            align-self: stretch;
+            margin: 5px;
+            background-color: black;
+        }
+        .icone{
+            width: 20px;
+            height: 20px;
+        }
+        .icone-linhas{
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-width: 2;
+        }
+        .cor-fonte{
+            color: #2457c5;
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: #2457c5;
+        }
+        .cor-fundo{
+            color: #f0c419;
+            font-weight: bold;
+            text-shadow: 0 0 0 #000;
+        }
+    </style>
+</head>
+<body>
+    <div role="toolbar" id="botoes">
+
+        <button title="Negrito" aria-label="Negrito"><strong aria-hidden="true">B</strong></button>
+
+        <button title="Itálico" aria-label="Itálico"><em aria-hidden="true">I</em></button>
+
+        <button title="Sublinhado" aria-label="Sublinhado"><u aria-hidden="true">U</u></button>
+
+        <span class="separador" aria-hidden="true"></span>
+
+        <button title="Alinhar esquerda" aria-label="Alinhar esquerda">
+            <svg class="icone icone-linhas" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M4 12h12M4 18h16" /></svg>
+        </button>
+
+        <button title="Centro" aria-label="Centro">
+            <svg class="icone icone-linhas" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M4 18h16" /></svg>
+        </button>
+
+        <button title="Direita" aria-label="Direita">
+            <svg class="icone icone-linhas" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M8 12h12M4 18h16" /></svg>
+        </button>
+
+        <button title="Justificar" aria-label="Justificar">
+            <svg class="icone icone-linhas" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+
+        <span class="separador" aria-hidden="true"></span>
+
+        <button title="Cor da fonte" aria-label="Cor da fonte"><span class="cor-fonte" aria-hidden="true">A</span></button>
+
+        <button title="Cor de fundo" aria-label="Cor de fundo"><span class="cor-fundo" aria-hidden="true">▰</span></button>
+
+    </div>
+</body>
+</html>

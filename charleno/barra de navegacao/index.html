@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegação</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #cfcfcf;
+            height: 10vh;
+            padding: 0px 20px;
+            flex: wrap;
+        }
+        #logo{
+            width: 10vw;
+            height: 80%;
+            background: url('logo.jpg') no-repeat center;
+            background-size: cover;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            transition: color 0.5s;
+        }
+        a:hover{
+            color: #111158;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" id="logo"></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+
+        <button>Entrar</button>
+    </nav>
+</body>
+</html>
