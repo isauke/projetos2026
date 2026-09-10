@@ -1,36 +1,86 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family:Arial, Helvetica, sans-seri ;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightslategray;
 }
 .layout{
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 24px;
 }
-#aside{
-    background-color: rgb(34, 168, 34);
-    height: 95vh;
+aside{
+    background-color: green;
+    height: 90vh;
     border-radius: 10px;
     flex: 0 0 260px;
-}
-#main{
-    background-color: rgb(10, 57, 196);
-    height: 95vh;
-    width: calc(100vw - 300px);
-    border-radius:10px;
-    flex: 1 1 0;
 
+}
+main{
+    background-color: darkblue;
+    height: 90vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    gap: 24px;
     flex-wrap: wrap;
+    flex: 1 1 0;
 }
 ul{
     display: flex;
     flex-direction: column;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px rgb(1, 110, 30);
+    transition: .5s;
+}
+.art{
+    display: flex;
+    background-color: darkgreen;
+    text-shadow: 0px 0px 2px crimson;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+}
+
+a:hover{
+    color: crimson;
+}
+@media (max-width: 768px){
+    .layout{
+        flex-direction: column;
+    }
+    aside{ 
+        display: flex;
+        align-items: center;
+        flex: none;
+        width: calc(100vw - 100px);
+        height: 70px;
+    }
+    main{
+        flex: none;
+        width: calc(100vw - 67px);
+        height: 81vh;
+    }
+    ul{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    a{
+        font-size: 1rem;
+    }
 }
