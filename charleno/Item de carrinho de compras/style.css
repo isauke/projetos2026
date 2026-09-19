@@ -1,0 +1,228 @@
+:root {
+    /* ==============================
+       🎨 CORES PRINCIPAIS
+       ============================== */
+
+    --cor-primaria: #2563eb;
+    --cor-primaria-hover: #1d4ed8;
+    --cor-primaria-clara: #dbeafe;
+
+    --cor-secundaria: #64748b;
+    --cor-secundaria-hover: #475569;
+
+    /* ==============================
+       🛒 CARRINHO DE COMPRAS
+       ============================== */
+
+    --cor-fundo: #f8fafc;
+    --cor-fundo-carrinho: #ffffff;
+    --cor-fundo-item: #ffffff;
+    --cor-fundo-item-hover: #f8fafc;
+
+    --cor-borda: #e2e8f0;
+    --cor-borda-destaque: #cbd5e1;
+
+    /* ==============================
+       📝 TEXTOS
+       ============================== */
+
+    --cor-texto-principal: #0f172a;
+    --cor-texto-secundario: #475569;
+    --cor-texto-terciario: #94a3b8;
+    --cor-texto-invertido: #ffffff;
+
+    /* ==============================
+       💰 PREÇOS
+       ============================== */
+
+    --cor-preco: #16a34a;
+    --cor-preco-antigo: #94a3b8;
+    --cor-desconto: #dc2626;
+
+    /* ==============================
+       🔘 BOTÕES
+       ============================== */
+
+    --cor-botao-principal: #2563eb;
+    --cor-botao-principal-hover: #1d4ed8;
+    --cor-botao-secundario: #f1f5f9;
+    --cor-botao-secundario-hover: #e2e8f0;
+
+    /* ==============================
+       🗑️ AÇÕES
+       ============================== */
+
+    --cor-remover: #dc2626;
+    --cor-remover-hover: #b91c1c;
+
+    /* ==============================
+       🔢 CONTROLES DE QUANTIDADE
+       ============================== */
+
+    --cor-controle-fundo: #f1f5f9;
+    --cor-controle-borda: #cbd5e1;
+    --cor-controle-hover: #e2e8f0;
+    --cor-controle-texto: #0f172a;
+
+    /* ==============================
+       📦 RESUMO DA COMPRA
+       ============================== */
+
+    --cor-resumo-fundo: #ffffff;
+    --cor-resumo-borda: #e2e8f0;
+    --cor-resumo-total: #0f172a;
+
+    /* ==============================
+       📐 SOMBRAS
+       ============================== */
+
+    --sombra-card: 0 4px 12px rgb(15 23 42 / 0.06);
+    --sombra-hover: 0 6px 16px rgb(15 23 42 / 0.10);
+
+    /* ==============================
+       🔲 OUTROS
+       ============================== */
+
+    --raio-pequeno: 4px;
+    --raio-medio: 8px;
+    --raio-grande: 12px;
+
+    --transicao-padrao: 200ms ease;
+}
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+body{
+   min-width: 320px;
+   color: var(--cor-texto-principal);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+   width: 100%;
+   min-height: 100vh;
+   padding: 24px;
+   background-color: var(--cor-fundo);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.lista-carrinho{
+   width: min(100%, 1000px);
+   max-height: 70vh;
+   background-color: var(--cor-fundo-item);
+   border: 1px solid var(--cor-borda);
+   border-radius: var(--raio-medio);
+   list-style: none;
+   overflow-y: auto;
+   box-shadow: var(--sombra-card);
+}
+li{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   min-height: 140px;
+   padding: 16px 20px;
+   background-color: var(--cor-fundo-item);
+   border-bottom: 1px solid var(--cor-borda);
+}
+li:last-child{
+   border-bottom: 0;
+}
+footer{
+   width: min(100%, 1000px);
+   min-height: 84px;
+   margin-top: 16px;
+   padding: 16px 20px;
+   background-color: var(--cor-fundo-carrinho);
+   border: 1px solid var(--cor-borda);
+   border-radius: var(--raio-medio);
+   box-shadow: var(--sombra-card);
+   display: flex;
+   align-items: center;
+}
+.total{
+   font-weight: 600;
+}
+.preco-final{
+   margin-left: 8px;
+   color: var(--cor-preco);
+   font-size: 1.4rem;
+   font-weight: 700;
+}
+.comprar{
+   margin-left: auto;
+   background-color: var(--cor-botao-principal);
+   min-width: 110px;
+   min-height: 44px;
+   padding: 0 16px;
+   color: var(--cor-texto-invertido);
+   font-size: 1em;
+   border: 0;
+   border-radius: var(--raio-medio);
+   cursor: pointer;
+}
+.imagens{
+   flex: 0 0 96px;
+   width: 96px;
+   height: 108px;
+   background-color: var(--cor-fundo);
+   border-radius: var(--raio-pequeno);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.imagem{
+   width: 84px;
+   height: 84px;
+   object-fit: contain;
+}
+.descricoes{
+   flex: 1;
+   min-width: 0;
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+}
+.descricoes>span{
+   overflow-wrap: anywhere;
+}
+.marca{
+   font-weight: 700;
+}
+.peso,.descricao{
+   color: var(--cor-texto-secundario);
+   font-size: 0.9rem;
+}
+.seletor-quantidade { display: flex; align-items: center; width: fit-content; border: 1px solid var(--cor-borda); border-radius: var(--raio-medio); overflow: hidden; }
+.seletor-quantidade__botao { width: 32px; height: 36px; border: 0; background-color: var(--cor-controle-fundo); color: var(--cor-controle-texto); font-size: 18px; cursor: pointer; }
+.seletor-quantidade__botao:hover { background-color: var(--cor-controle-hover); } 
+.seletor-quantidade__valor { width: 44px; height: 36px; padding: 0 4px; border: 0; color: var(--cor-texto-principal); background-color: var(--cor-fundo-item); text-align: center; font-weight: 600; }
+.acoes{
+   margin-left: auto;
+   flex: 0 0 230px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 12px;
+   flex-wrap: wrap;
+}
+.preco{
+   flex: 1;
+   min-width: 90px;
+   color: var(--cor-preco);
+   font-weight: 700;
+   text-align: right;
+}
+.remover{
+   border: 0;
+   background-color: transparent;
+   color: var(--cor-remover);
+   font: inherit;
+   cursor: pointer;
+}
+.remover:hover{
+   color: var(--cor-remover-hover);
+}

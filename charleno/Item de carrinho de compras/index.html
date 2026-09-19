@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <ul class="lista-carrinho">
+            <li>
+                <div class="imagens">
+                    <img src="imagens/arroz.webp" alt="Arroz" class="imagem">
+                </div>
+                <div class="descricoes">
+                    <span class="marca">Marca: Arroz bento</span>
+                    <span class="peso">Peso: 1kg</span>
+                    <span class="descricao">Descrição: Comida perecível</span>
+                </div>
+                <div class="acoes">
+                    <span class="preco">Preço: R$ 20,00</span>
+                    <div class="seletor-quantidade">
+                        <button class="seletor-quantidade__botao" type="button" aria-label="Diminuir quantidade">-</button>
+                        <input class="seletor-quantidade__valor" type="number" value="1" min="1" aria-label="Quantidade de Arroz">
+                        <button class="seletor-quantidade__botao" type="button" aria-label="Aumentar quantidade">+</button>
+                    </div>
+                    <button class="remover" type="button">Remover</button>
+                </div>
+            </li>
+            <li>
+                <div class="imagens">
+                    <img src="imagens/arroz.webp" alt="Arroz integral" class="imagem">
+                </div>
+                <div class="descricoes">
+                    <span class="marca">Marca: Arroz integral</span>
+                    <span class="peso">Peso: 1kg</span>
+                    <span class="descricao">Descrição: Fonte de fibras</span>
+                </div>
+                <div class="acoes">
+                    <span class="preco">Preço: R$ 24,00</span>
+                    <div class="seletor-quantidade">
+                        <button class="seletor-quantidade__botao" type="button" aria-label="Diminuir quantidade">-</button>
+                        <input class="seletor-quantidade__valor" type="number" value="1" min="1" aria-label="Quantidade de Arroz integral">
+                        <button class="seletor-quantidade__botao" type="button" aria-label="Aumentar quantidade">+</button>
+                    </div>
+                    <button class="remover" type="button">Remover</button>
+                </div>
+            </li>
+            <li>
+                <div class="imagens">
+                    <img src="imagens/arroz.webp" alt="Arroz parboilizado" class="imagem">
+                </div>
+                <div class="descricoes">
+                    <span class="marca">Marca: Arroz parboilizado</span>
+                    <span class="peso">Peso: 1kg</span>
+                    <span class="descricao">Descrição: Grãos selecionados</span>
+                </div>
+                <div class="acoes">
+                    <span class="preco">Preço: R$ 22,00</span>
+                    <div class="seletor-quantidade">
+                        <button class="seletor-quantidade__botao" type="button" aria-label="Diminuir quantidade">-</button>
+                        <input class="seletor-quantidade__valor" type="number" value="1" min="1" aria-label="Quantidade de Arroz parboilizado">
+                        <button class="seletor-quantidade__botao" type="button" aria-label="Aumentar quantidade">+</button>
+                    </div>
+                    <button class="remover" type="button">Remover</button>
+                </div>
+            </li>
+        </ul>
+        <footer>
+            <span class="total">Total: </span>
+            <span class="preco-final">R$ 67,00</span>
+            <button class="comprar">Comprar</button>
+        </footer>
+    </main>
+</body>
+</html>
