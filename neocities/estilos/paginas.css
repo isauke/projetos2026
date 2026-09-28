@@ -1,0 +1,18 @@
+.conteudo-pagina{
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 48px 0;
+}
+.conteudo-pagina h2{
+    margin-bottom: 16px;
+    color: var(--vermelho-escuro);
+}
+.conteudo-pagina p{
+    max-width: 70ch;
+    line-height: 1.7;
+}
+@media (max-width: 600px){
+    .conteudo-pagina{
+        padding: 32px 0;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relativo e Absoluto</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+            background-color: crimson;
+        }
+        #absoluto {
+            position: absolute;
+            top: 500px;
+            left: 500px;
+            background: #3B82F6;
+            color: #fff;
+            padding: 16px;
+            height: 200px;
+            width: 200px;
+        }
+
+        #relativo {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background: #22C55E;
+            color: #fff;
+            padding: 16px;
+            height: 200px;
+            width: 200px;
+        }   
+    </style>
+</head>
+<body>
+    <main>
+        <div id="absoluto">
+            <p>Container Absoluto</p>
+        </div>
+        <div id="relativo">
+            <p>Container Relativo</p>
+        </div>
+    </main>
+</body>
+</html>
