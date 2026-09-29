@@ -1,87 +1,65 @@
-:root {
-  /* Stepper states */
-  --stepper-done: #22C55E;
-  --stepper-active: #3B82F6;
-  --stepper-pending: #D1D5DB;
-
-  /* Linha separadora entre os passos */
-  --stepper-line: #E2E8F0;
-}   
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body{
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 ol{
     display: flex;
-    list-style: none;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    min-width: 70%;
+    height: 200px;
+    list-style: none;
 }
 li{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
+    width: 70px;
     height: 120px;
-
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1;
 }
-.step{
-    position: relative; /* âncora pro pseudo-elemento */
-}
-.done>.ball{
-    background-color:var(--stepper-done);
-}
-.active>.ball{
-    background-color: var(--stepper-active);
-}
-.pending>.ball{
-    background-color: var(--stepper-pending);
-}
-.ball {
-    position: relative;
-    z-index: 1; /* fica por cima da linha */
-    height: 64px;
-    /* ...resto do que você já tem... */
-    border-radius: 50%;
+.bola{
     width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: darkgrey;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.step::after {
-    content: "";
-    position: absolute;
-    top: 32px;           /* metade de 64px = centro vertical da bola */
-    left: 50%;           /* começa no centro da bola atual */
-    width: 100%;         /* estica até o centro da próxima */
-    height: 4px;
-    background: var(--stepper-line); /* cor padrão, cinza */
-    z-index: 0;
-}
-
-.step:last-child::after {
-    display: none; /* último item não tem próxima etapa, não precisa de linha */
-}
-
-.step.done::after {
-    background: var(--stepper-done); /* linha colorida quando a etapa já foi concluída */
-}
-.step:nth-child(1) { order: 1; }
-.step:nth-child(2) { order: 2; }
-.step:nth-child(3) { order: 3; }
-.step:nth-child(4) { order: 4; }
 .label{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    height: 50px;
+    
+}
+li {
+  position: relative;   /* referência para o ::after */
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: 31px;            /* meio da bola (32px) menos metade da linha (1px) */
+  left: 50%;            /* começa no centro da bola */
+  width: 100%;          /* termina no centro da próxima */
+  height: 2px;
+  background-color: black;
+}
+
+li:last-child::after {
+  display: none;        /* a última etapa não tem próxima */
+}
+
+.bola {
+  position: relative;   /* sem isso o z-index não funciona */
+  z-index: 1;           /* bola por cima da linha */
 }

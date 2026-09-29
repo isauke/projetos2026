@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+aside {
+  padding: 1.5rem;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  overflow: hidden;
+}
+
+aside h1 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside a {
+  color: #f0f0f0;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+aside a:hover {
+  color: #fff;
+}
+
+main {
+  padding: 1.5rem;
+  overflow-y: auto;
+}   
