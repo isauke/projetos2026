@@ -182,7 +182,7 @@ print(f"Média dos aprovados: {media_turma:.2f}")
 precos = [45.0, 120.5, 30.0, 15.0, 250.0, 89.9]
 novosprecos = [n*0.9 for n in precos if n >= 50 ]
 print(novosprecos)
-"""
+
 matriz = [
         [1, 2, 3],
         [4, 5, 6],
@@ -194,3 +194,12 @@ for linha in matriz:
         soma+=coluna
         print(coluna)
 print(soma)
+"""
+pessoa = ['João', 17]
+lista = [['Maria', 25], ['Pedro', 30]]
+lista.append(pessoa[:])
+print(lista)
+print(pessoa)
+del lista[2]
+print(lista)
+print(pessoa)
